@@ -23,6 +23,7 @@ for (let i = 0; i < array1.length; i++) {
 }
 
 // Exemplo 6 - for...of
+arr1 = [1,2,3,4,5]
 for (let valor of arr1) {
   console.log("Exemplo 6 ->", valor);
 }

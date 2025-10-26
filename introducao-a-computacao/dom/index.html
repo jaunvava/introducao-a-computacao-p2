@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Formulário — DOM</title>
+  </head>
+  <body>
+    <main class="form-card" role="main">
+      <h2 class="form-title">Fale conosco</h2>
+      <p class="form-subtitle lead">
+        Preencha seus dados abaixo e enviaremos uma resposta em breve.
+      </p>
+
+      <form id="contato-form">
+        <div class="input-row">
+          <div class="form-group">
+            <label for="nome">Nome completo</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Seu nome"
+              required
+            />
+            <small
+              class="field-error"
+              id="nome-error"
+              aria-live="polite"
+            ></small>
+          </div>
+
+          <div class="form-group">
+            <label for="numero">Idade</label>
+            <input
+              type="number"
+              id="numero"
+              name="idade"
+              placeholder="Ex: 30"
+              min="0"
+              max="120"
+              required
+            />
+            <small
+              class="field-error"
+              id="numero-error"
+              aria-live="polite"
+            ></small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="seu@exemplo.com"
+            required
+          />
+          <small
+            class="field-error"
+            id="email-error"
+            aria-live="polite"
+          ></small>
+        </div>
+
+        <div class="form-group">
+          <label for="mensagem">Mensagem</label>
+          <textarea
+            id="mensagem"
+            name="mensagem"
+            placeholder="Como podemos ajudar?"
+            rows="4"
+          ></textarea>
+          <small
+            class="field-error"
+            id="mensagem-error"
+            aria-live="polite"
+          ></small>
+        </div>
+
+        <button type="submit" class="btn-primary" id="botao">
+          Enviar mensagem
+        </button>
+        <button type="reset" class="btn-reset" id="reset">Limpar</button>
+
+        <div id="result" class="form-foot" aria-live="polite"></div>
+      </form>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
