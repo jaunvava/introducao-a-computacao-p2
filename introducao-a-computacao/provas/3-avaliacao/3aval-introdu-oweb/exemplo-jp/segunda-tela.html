@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Segunda Tela</title>
+    <link rel="stylesheet" href="segunda-tela.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1>Olá, <span id="nomeUsuario"></span>!</h1>
+        <div class="info-usuario">
+          <h2>Informações do Usuário</h2>
+          <div class="info-item">
+            <strong>E-mail:</strong>
+            <span id="emailUsuario"></span>
+          </div>
+          <div class="info-item">
+            <strong>Senha:</strong>
+            <span id="senhaUsuario"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const email = localStorage.getItem("usuarioEmail");
+      const senha = localStorage.getItem("usuarioSenha");
+
+      const nome = email ? email.split("@")[0] : "Usuário";
+
+      document.getElementById("nomeUsuario").textContent = nome;
+      document.getElementById("emailUsuario").textContent =
+        email || "Não informado";
+      document.getElementById("senhaUsuario").textContent =
+        senha || "Não informado";
+    </script>
+  </body>
+</html>
